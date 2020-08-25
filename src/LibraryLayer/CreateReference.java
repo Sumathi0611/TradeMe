@@ -20,7 +20,11 @@ public class CreateReference {
 	public static Map<String, String> refMap = new HashMap<String, String>();
 	public static String strArray[] = new String[2];
 
-	
+	  /**
+ 	 * This method is to read the excel sheet and to create a reference map with all the attributes and values
+ 	 * All the values in excel sheet can be referenced from the map created
+ 	 * @return void This method does not return any value
+ 	 */
 	public static void createReference() throws IOException {
 		// TODO Auto-generated method stub
 		System.out.println("The user directory is "+System.getProperty("user.dir"));

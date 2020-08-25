@@ -50,28 +50,28 @@ formatter.match({
   "location": "HomePageStepDefinition.open_the_browser_and_launch_the_application()"
 });
 formatter.result({
-  "duration": 11154268200,
+  "duration": 11881540100,
   "status": "passed"
 });
 formatter.match({
   "location": "HomePageStepDefinition.I_select_Cars_Bikes_and_Boats_in_search_Items()"
 });
 formatter.result({
-  "duration": 8818336500,
+  "duration": 10601317700,
   "status": "passed"
 });
 formatter.match({
-  "location": "usedCarsStepDefinition.validate_atleast_if_one_listing_is_present()"
+  "location": "UsedCarsStepDefinition.validate_atleast_if_one_listing_is_present()"
 });
 formatter.result({
-  "duration": 219876500,
+  "duration": 305316100,
   "status": "passed"
 });
 formatter.match({
   "location": "HomePageStepDefinition.close_the_browser()"
 });
 formatter.result({
-  "duration": 192298300,
+  "duration": 232014200,
   "status": "passed"
 });
 formatter.scenario({
@@ -112,28 +112,28 @@ formatter.match({
   "location": "HomePageStepDefinition.open_the_browser_and_launch_the_application()"
 });
 formatter.result({
-  "duration": 9892088100,
+  "duration": 10206933700,
   "status": "passed"
 });
 formatter.match({
   "location": "HomePageStepDefinition.I_select_Cars_Bikes_and_Boats_in_search_Items()"
 });
 formatter.result({
-  "duration": 8327504300,
+  "duration": 8272441900,
   "status": "passed"
 });
 formatter.match({
-  "location": "usedCarsStepDefinition.verify_if_kia_make_is_present()"
+  "location": "UsedCarsStepDefinition.verify_if_kia_make_is_present()"
 });
 formatter.result({
-  "duration": 1014841700,
+  "duration": 956144700,
   "status": "passed"
 });
 formatter.match({
   "location": "HomePageStepDefinition.close_the_browser()"
 });
 formatter.result({
-  "duration": 4113032600,
+  "duration": 4328537000,
   "status": "passed"
 });
 formatter.scenario({
@@ -174,28 +174,28 @@ formatter.match({
   "location": "HomePageStepDefinition.open_the_browser_and_launch_the_application()"
 });
 formatter.result({
-  "duration": 8787727100,
+  "duration": 8233949200,
   "status": "passed"
 });
 formatter.match({
   "location": "HomePageStepDefinition.I_select_Cars_Bikes_and_Boats_in_search_Items()"
 });
 formatter.result({
-  "duration": 8354595500,
+  "duration": 9029959400,
   "status": "passed"
 });
 formatter.match({
-  "location": "usedCarsStepDefinition.verify_all_the_details_in_any_one_used_car_listing()"
+  "location": "UsedCarsStepDefinition.verify_all_the_details_in_any_one_used_car_listing()"
 });
 formatter.result({
-  "duration": 8339972300,
+  "duration": 8087489400,
   "status": "passed"
 });
 formatter.match({
   "location": "HomePageStepDefinition.close_the_browser()"
 });
 formatter.result({
-  "duration": 4116711500,
+  "duration": 226425200,
   "status": "passed"
 });
 formatter.scenario({
@@ -241,35 +241,35 @@ formatter.match({
   "location": "HomePage_APIStepDefinition.set_the_used_cars_api_endpoint()"
 });
 formatter.result({
-  "duration": 726598000,
+  "duration": 1190107800,
   "status": "passed"
 });
 formatter.match({
   "location": "HomePage_APIStepDefinition.set_request_header()"
 });
 formatter.result({
-  "duration": 10805100,
+  "duration": 7974000,
   "status": "passed"
 });
 formatter.match({
   "location": "HomePage_APIStepDefinition.set_get_request()"
 });
 formatter.result({
-  "duration": 418609700,
+  "duration": 395170800,
   "status": "passed"
 });
 formatter.match({
-  "location": "usedCars_APIStepDefinition.verify_valid_response()"
+  "location": "UsedCars_APIStepDefinition.verify_valid_response()"
 });
 formatter.result({
-  "duration": 2384300,
+  "duration": 1888700,
   "status": "passed"
 });
 formatter.match({
-  "location": "usedCars_APIStepDefinition.verify_if_atleast_one_listing_is_present()"
+  "location": "UsedCars_APIStepDefinition.verify_if_atleast_one_listing_is_present()"
 });
 formatter.result({
-  "duration": 23665500,
+  "duration": 21495300,
   "status": "passed"
 });
 formatter.scenario({
@@ -315,35 +315,35 @@ formatter.match({
   "location": "HomePage_APIStepDefinition.set_the_used_cars_api_endpoint()"
 });
 formatter.result({
-  "duration": 83000,
+  "duration": 80800,
   "status": "passed"
 });
 formatter.match({
   "location": "HomePage_APIStepDefinition.set_request_header()"
 });
 formatter.result({
-  "duration": 29700,
+  "duration": 48500,
   "status": "passed"
 });
 formatter.match({
   "location": "HomePage_APIStepDefinition.set_get_request()"
 });
 formatter.result({
-  "duration": 25599300,
+  "duration": 24839300,
   "status": "passed"
 });
 formatter.match({
-  "location": "usedCars_APIStepDefinition.verify_valid_response()"
+  "location": "UsedCars_APIStepDefinition.verify_valid_response()"
 });
 formatter.result({
-  "duration": 77800,
+  "duration": 61600,
   "status": "passed"
 });
 formatter.match({
-  "location": "usedCars_APIStepDefinition.verify_if_kia_make_in_listing_is_present_in_trademe_used_cars_listing()"
+  "location": "UsedCars_APIStepDefinition.verify_if_kia_make_in_listing_is_present_in_trademe_used_cars_listing()"
 });
 formatter.result({
-  "duration": 12823800,
+  "duration": 20290200,
   "status": "passed"
 });
 formatter.scenario({
@@ -389,35 +389,35 @@ formatter.match({
   "location": "HomePage_APIStepDefinition.set_the_used_cars_details_api_endpoint()"
 });
 formatter.result({
-  "duration": 236100,
+  "duration": 93300,
   "status": "passed"
 });
 formatter.match({
   "location": "HomePage_APIStepDefinition.set_oauth_request_header()"
 });
 formatter.result({
-  "duration": 158000,
+  "duration": 107300,
   "status": "passed"
 });
 formatter.match({
   "location": "HomePage_APIStepDefinition.set_oauth_get_request()"
 });
 formatter.result({
-  "duration": 191584900,
+  "duration": 185312300,
   "status": "passed"
 });
 formatter.match({
-  "location": "usedCars_APIStepDefinition.verify_valid_response()"
+  "location": "UsedCars_APIStepDefinition.verify_valid_response()"
 });
 formatter.result({
-  "duration": 54300,
+  "duration": 50000,
   "status": "passed"
 });
 formatter.match({
   "location": "HomePage_APIStepDefinition.verify_if_appropriate_details_are_present_in_used_listing_in_trademe_used_cars()"
 });
 formatter.result({
-  "duration": 94319100,
+  "duration": 113897400,
   "status": "passed"
 });
 });

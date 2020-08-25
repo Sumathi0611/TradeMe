@@ -2,19 +2,32 @@ package LibraryLayer;
 
 import java.util.List;
 
+
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
+/**
+* Module_TradeMe_UsedCars class contains all the methods for TradeMe used cars
+* @author  Sumathi Thirumugam
+* @version 1.0
+* @since   2020-08-25
+*/
 public class Module_TradeMe_UsedCars extends CommonFunctions_Selenium{
 	
+	/**
+ 	 * This method is to verify if used listings are present
+ 	 * @return void This method does not return any value
+ 	 */
 	public static void verifyUsedCarListing() {
 		 List<WebElement> listUsedCars = driver.findElements(By.xpath(CreateReference.refMap.get("listUsedCars")));
 		 boolean usedCarsFlag=false;
 		 findUsedCarsLoop:for(int count=0;count<listUsedCars.size();count++)
 		 {
 			 String listCarCount=listUsedCars.get(count).getText();
+			 //Checks if atleast one used car listing has count greater than 0
 			 if(!listCarCount.contentEquals("(0)"))
 			 {
 				 
@@ -37,7 +50,10 @@ public class Module_TradeMe_UsedCars extends CommonFunctions_Selenium{
 			 System.out.println("There is no car listings in the used car section");
 		 }
 	 }
-
+	/**
+ 	 * This method is to verify if Kia Make is present
+ 	 * @return void This method does not return any value
+ 	 */
 	public static void verifyKiaMake() {
 		 List<WebElement> listUsedCars = driver.findElements(By.xpath(CreateReference.refMap.get("listUsedCars")));
 		 List<WebElement> listUsedCarMake = driver.findElements(By.xpath(CreateReference.refMap.get("listUsedCarsMake")));
@@ -47,6 +63,7 @@ public class Module_TradeMe_UsedCars extends CommonFunctions_Selenium{
 		 {
 			 listCarCount=listUsedCars.get(count).getText();
 			 String make=listUsedCarMake.get(count).getText();
+			 //Checks if Kia make is present
 			 if(make.contentEquals("Kia"))
 			 {
 				 
@@ -61,6 +78,7 @@ public class Module_TradeMe_UsedCars extends CommonFunctions_Selenium{
 		 }
 		 if(carMake)
 		 {
+			 //Checks if Kia make is present and prints the count
 			 if(!listCarCount.contentEquals("(0)"))
 					 {
 			 System.out.println("Kia Make is present in the used car listing and the number of listing is "+listCarCount);
@@ -77,7 +95,10 @@ public class Module_TradeMe_UsedCars extends CommonFunctions_Selenium{
 			 System.out.println("Kia Make is not present in the used car listing");
 		 }
 	 }
-
+	/**
+ 	 * This method is to verify all the details in the used car listing
+ 	 * @return void This method does not return any value
+ 	 */
 	public static void verifyDetailsOnUsedCar() {
 		 CommonFunctions_Selenium.click(CreateReference.refMap.get("elementUsedCar1"));
 		 

@@ -18,13 +18,21 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 
 
-
+/**
+* Module_TradeMe_HomePage class contains all the methods for TradeMe Homepage
+* @author  Sumathi Thirumugam
+* @version 1.0
+* @since   2020-08-25
+*/
 
 
 public class Module_TradeMe_HomePage extends CommonFunctions_Selenium{
 	ExtentReports reports = new ExtentReports();
 
-	
+	  /**
+ 	 * This method is to navigate to the used car section from home page
+ 	 * @return void This method does not return any value
+ 	 */
 	 public static void selectCarsFromSearchItems() {
 			
 		  selectDropdownOption(CreateReference.refMap.get("drpdownSearchType"),"Cars, bikes & boats");

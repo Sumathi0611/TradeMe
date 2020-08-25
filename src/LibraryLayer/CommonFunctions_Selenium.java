@@ -1,4 +1,6 @@
 package LibraryLayer;
+import static org.junit.Assert.fail;
+
 /**
 * CommonFunctions_Selenium class contains Selenium methods
 * @author  Sumathi Thirumugam
@@ -13,7 +15,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -31,6 +32,8 @@ public class CommonFunctions_Selenium{
 	   */
 	public void start_Browser() throws IOException
 	{
+		try
+		{
 		//Calls the create reference method to create a reference Map with Key and Value pair required for execution
 		CreateReference.createReference();
 		//Sets the chromedriver path
@@ -39,6 +42,12 @@ public class CommonFunctions_Selenium{
 		driver = new ChromeDriver();
         driver.get(CreateReference.refMap.get("URL"));
         driver.manage().window().maximize();
+		}
+		catch(Exception e)
+		{
+			System.out.println(e.getMessage());
+			fail("Issue in start browser"+e.getMessage());
+		}
         
         
        
@@ -51,11 +60,19 @@ public class CommonFunctions_Selenium{
 	   */
 	public static void selectDropdownOption(String xpath,String visibleText)
 	{
+		try
+		{
 		
 		//WebDriverWait wait=new WebDriverWait(driver, 200);
 		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
 		Select dropdown = new Select(driver.findElement(By.xpath(xpath)));
 		dropdown.selectByVisibleText(visibleText);
+		}
+		catch(Exception e)
+		{
+			System.out.println(e.getMessage());
+			fail("Issue in selectDropdownOption for "+xpath +e.getMessage());
+		}
 		
 	}
 	/**
@@ -65,14 +82,24 @@ public class CommonFunctions_Selenium{
 	   */
 	public static String getText(String xpath)
 	{
+		try
+		{
 		String value=null;
 		
 		WebDriverWait wait=new WebDriverWait(driver, 200);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
 		value=driver.findElement(By.xpath(xpath)).getText();
-		
-		
 		return value;
+		}
+		catch(Exception e)
+		{
+			System.out.println(e.getMessage());
+			fail("Issue in getText for "+xpath +e.getMessage());
+		}
+		return null;
+		
+		
+
 	}
 	/**
 	   * This method is to click an element
@@ -81,14 +108,20 @@ public class CommonFunctions_Selenium{
 	   */
 	public static void click(String xpath)
 	{
-		
+		try
+		{
 		WebDriverWait wait=new WebDriverWait(driver, 200);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
 			WebElement element = driver.findElement(By.xpath(xpath));
 			JavascriptExecutor js =(JavascriptExecutor)driver;
 			js.executeScript("arguments[0].scrollIntoView(false);", element);
 			((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
-		  
+		}
+		catch(Exception e)
+		{
+			System.out.println(e.getMessage());
+			fail("Issue in click for "+xpath +e.getMessage());
+		}
 		
 	}
 	/**
@@ -98,6 +131,8 @@ public class CommonFunctions_Selenium{
 	   */
 	public static void elementExists(String xpath)
 	{
+		try
+		{
 		
 		WebDriverWait wait=new WebDriverWait(driver, 2000);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
@@ -105,7 +140,12 @@ public class CommonFunctions_Selenium{
 			JavascriptExecutor js =(JavascriptExecutor)driver;
 			js.executeScript("arguments[0].scrollIntoView(false);", element);
 		    element.isDisplayed();
-		
+		}
+		catch(Exception e)
+		{
+			System.out.println(e.getMessage());
+			fail("Issue in elementExists for "+xpath +e.getMessage());
+		}
 	}
 	
 	/**
@@ -115,9 +155,16 @@ public class CommonFunctions_Selenium{
 	   */
 	public static void closeBrowser()
 	{
-		
+		try
+		{
 		
 		driver.close();
+		}
+		catch(Exception e)
+		{
+			System.out.println(e.getMessage());
+			fail("Issue in closebrowser for "+e.getMessage());
+		}
 		
 	}
 
